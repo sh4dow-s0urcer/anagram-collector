@@ -1,4 +1,3 @@
-console.log("Commencing analysis...");
 const startingTime = Date.now();
 const words = require("fs").readFileSync("./resources/wordlist.txt").toString().split("\n");
 const anagrams = new Map();
@@ -7,7 +6,7 @@ let max_anagnum = 0;
 let max_anagwords;
 let anagr_total = 0;
 
-
+console.log("Commencing analysis...");
 for (let i = 0; i < words.length; i++) {
 	const sortedWords = words[i].split('').sort().join("");
 	const anagr = anagrams.get(sortedWords)
@@ -30,3 +29,5 @@ console.log("Total words: " + words.length);
 console.log("Total anagrams: " + anagr_total);
 console.log("Maximum anagrams found (" + max_anagwords.length + "): " + max_anagwords);
 console.log("Computation time done in: " + runtime + " ms");
+
+module.exports = words;
