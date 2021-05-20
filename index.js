@@ -29,5 +29,3 @@ console.log("Total words: " + words.length);
 console.log("Total anagrams: " + anagr_total);
 console.log("Maximum anagrams found (" + max_anagwords.length + "): " + max_anagwords);
 console.log("Computation time done in: " + runtime + " ms");
-
-module.exports = words;
